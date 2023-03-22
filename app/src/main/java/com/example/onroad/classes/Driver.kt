@@ -3,17 +3,17 @@ package com.example.onroad.classes
 class Driver {
     var name:String = "name"
     var car:String = "car model"
-    var service:String = "tour guide or driver"
-    var rating:Int = 0
+    var status:String = "tour guide or driver"
+    var rating:Float = 0.0F
 
     constructor()
     constructor(name:String,
                 car:String,
-                service:String,
-                rating:Int){
+                status:String,
+                rating:Float){
         this.name = name
         this.car = car
-        this.service= service
+        this.status= status
         this.rating = rating
 
     }
