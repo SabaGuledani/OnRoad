@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "919822061295",
+    "project_id": "onroad-6f3bb",
+    "storage_bucket": "onroad-6f3bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:919822061295:android:a1c530d86672170009151a",
+        "android_client_info": {
+          "package_name": "com.example.onroad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "919822061295-gig56nb68frvi46r9qolki566932s66k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.onroad",
+            "certificate_hash": "fbdd2fdf7b71a2d07ba4923a36b7ab798f93f2db"
+          }
+        },
+        {
+          "client_id": "919822061295-i8i22a641lfkj69nkqs15bt2p7t1daq0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtrs0WKa52hV2xXIbK6lbB625btvNZADE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "919822061295-i8i22a641lfkj69nkqs15bt2p7t1daq0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
