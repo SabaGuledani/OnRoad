@@ -7,9 +7,9 @@ import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onroad.R
-import com.example.onroad.classes.Driver
+import com.example.onroad.classes.TourOperator
 
-class RecyclerviewAdapter(var driverList:ArrayList<Driver>):
+class RecyclerviewAdapter(var tourOperatorList:ArrayList<TourOperator>):
 RecyclerView.Adapter<RecyclerviewAdapter.DriverViewHolder>(){
     private lateinit var mlistener:onItemClickListener
 
@@ -31,28 +31,29 @@ RecyclerView.Adapter<RecyclerviewAdapter.DriverViewHolder>(){
             itemView.setOnClickListener {
                 listener.onItemClick(adapterPosition)
 
-
-
             }
         }
-
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DriverViewHolder {
         val view:View = LayoutInflater.from(parent.context).inflate(R.layout.recycler_view_item,parent,false)
         return DriverViewHolder(view,mlistener)
     }
 
     override fun getItemCount(): Int {
-        return driverList.size
+        return tourOperatorList.size
     }
 
     override fun onBindViewHolder(holder: DriverViewHolder, position: Int) {
-        val currentDriver = driverList[position]
+        val currentDriver = tourOperatorList[position]
         holder.name.text = currentDriver.name
         holder.carModel.text = currentDriver.car
         holder.ratingbar.rating = currentDriver.rating
-        holder.status.text = currentDriver.status
+        when(currentDriver.status){
+            1->holder.status.text = "Driver"
+            2->holder.status.text = "Guide"
+            3->holder.status.text = "Driver-guide"
+        }
+
         holder.rating.text = currentDriver.rating.toString()
     }
 

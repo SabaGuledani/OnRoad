@@ -2,22 +2,18 @@ package com.example.onroad.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.onroad.R
 import com.example.onroad.adapters.RecyclerviewAdapter
-import com.example.onroad.classes.Driver
+import com.example.onroad.classes.TourOperator
 import com.example.onroad.databinding.FragmentMainBinding
 import com.google.firebase.database.*
-import kotlin.reflect.typeOf
 
 
 class MainFragment : Fragment(R.layout.fragment_main) {
         private lateinit var binding:FragmentMainBinding
-        private lateinit var driverList:ArrayList<Driver>
+        private lateinit var tourOperatorList:ArrayList<TourOperator>
         private lateinit var dbref: DatabaseReference
         private lateinit var driverRecyclerviewAdapter: RecyclerviewAdapter
 
@@ -27,21 +23,20 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
         val recyclerview = binding.recyclerView
         recyclerview.layoutManager = LinearLayoutManager(context)
-        driverList = ArrayList()
+        tourOperatorList = ArrayList()
 
         dbref = FirebaseDatabase.getInstance().getReference()
-        driverRecyclerviewAdapter = RecyclerviewAdapter(driverList)
+        driverRecyclerviewAdapter = RecyclerviewAdapter(tourOperatorList)
         recyclerview.adapter = driverRecyclerviewAdapter
 
         dbref.child("drivers").addValueEventListener(object :ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
-                driverList.clear()
+                tourOperatorList.clear()
                 for (postsnapshot in snapshot.children) {
-                    val driverobject = postsnapshot.getValue(Driver::class.java)
+                    val driverobject = postsnapshot.getValue(TourOperator::class.java)
                     if (driverobject != null) {
-                        driverList.add(driverobject)
-                        var temp = driverobject.rating
-                        Toast.makeText(context, temp::class.toString(), Toast.LENGTH_SHORT).show()
+                        tourOperatorList.add(driverobject)
+
                     }
                 }
                 driverRecyclerviewAdapter.notifyDataSetChanged()
