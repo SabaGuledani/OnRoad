@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">OnRoad</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in augue non dui faucibus ullamcorper. Quisque sagittis sapien mi, vel gravida velit venenatis a. Nullam maximus libero sit amet arcu posuere hendrerit. Ut euismod vestibulum felis, vitae pellentesque nisi tempor quis. Vivamus elit lectus, ultricies eget bibendum nec, tincidunt sed justo</string>
     <string name="name">Name</string>
     <string name="surname">Surname</string>
     <string name="E_mail">E-mail</string>

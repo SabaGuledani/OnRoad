@@ -16,7 +16,7 @@
         android:src="@drawable/temporary_user"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:shapeAppearanceOverlay="@style/circle" />
+        app:shapeAppearanceOverlay="@style/rounded" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/flagImageView"

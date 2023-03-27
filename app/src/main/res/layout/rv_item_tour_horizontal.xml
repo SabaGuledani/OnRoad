@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="180dp"
+    android:layout_height="230dp"
+    tools:text="@tools:sample/lorem/random">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/tour_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="160dp"
+        android:maxHeight="105dp"
+        android:src="@drawable/martvili"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearanceOverlay="@style/rounded"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tour_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="160dp"
+        android:text="tour name lorem ipsum"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tour_imageview"
+        app:layout_constraintTop_toBottomOf="@+id/tour_imageview" />
+
+
+    <TextView
+        android:id="@+id/tour_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="160dp"
+        android:maxLines="5"
+        android:ellipsize="end"
+        android:textSize="12sp"
+        android:text="@string/lorem_ipsum"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tour_name"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RatingBar
+        android:id="@+id/tour_ratingbar"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="3dp"
+        android:rating="2.5"
+        android:scaleX=".6"
+        android:scaleY=".6"
+        android:stepSize="0.5"
+        android:transformPivotX="0dp"
+        android:transformPivotY="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tour_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.1"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/tour_ratingbar"
+        app:layout_constraintTop_toTopOf="@+id/tour_ratingbar" />
+
+    <TextView
+        android:id="@+id/car_model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="3dp"
+        android:text="car model"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
