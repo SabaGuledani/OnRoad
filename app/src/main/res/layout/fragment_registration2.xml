@@ -28,52 +28,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="70dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.505">
-
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/name"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:layout_weight="1"
-                android:hint="@string/car_model"
-                app:boxBackgroundColor="#8BFFFFFF"
-                app:boxCornerRadiusBottomEnd="30dp"
-                app:boxCornerRadiusBottomStart="30dp"
-                app:boxCornerRadiusTopEnd="30dp"
-                app:boxCornerRadiusTopStart="30dp"
-                app:boxStrokeColor="@color/black"
-                app:boxStrokeWidth="2.5dp"
-                app:hintTextColor="@color/black">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-
-
+        app:layout_constraintVertical_bias="0.315">
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/email"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:id="@+id/name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
-            android:hint="@string/E_mail"
+            android:layout_weight="1"
+            android:hint="@string/car_model"
             app:boxBackgroundColor="#8BFFFFFF"
             app:boxCornerRadiusBottomEnd="30dp"
             app:boxCornerRadiusBottomStart="30dp"
@@ -83,23 +54,50 @@
             app:boxStrokeWidth="2.5dp"
             app:hintTextColor="@color/black">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/add_language_1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:hint="@string/languages"
+            app:boxBackgroundColor="#8BFFFFFF"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="2.5dp"
+            app:hintTextColor="@color/black"
+            >
+
             <AutoCompleteTextView
                 android:id="@+id/autocompletetext"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:inputType="none"
-                android:text="AutoCompleteTextView" />
+                android:paddingStart="20dp"
+                android:text="select"
+
+                />
 
 
         </com.google.android.material.textfield.TextInputLayout>
-
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/password"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/add_language_2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/password"
+            android:layout_marginBottom="15dp"
+            android:hint="@string/languages"
             app:boxBackgroundColor="#8BFFFFFF"
             app:boxCornerRadiusBottomEnd="30dp"
             app:boxCornerRadiusBottomStart="30dp"
@@ -107,22 +105,32 @@
             app:boxCornerRadiusTopStart="30dp"
             app:boxStrokeColor="@color/black"
             app:boxStrokeWidth="2.5dp"
-            app:endIconMode="password_toggle">
+            app:hintTextColor="@color/black"
+            android:visibility="gone"
+            >
 
-            <com.google.android.material.textfield.TextInputEditText
+            <AutoCompleteTextView
+                android:id="@+id/autocompletetext2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword" />
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:inputType="none"
+                android:paddingStart="20dp"
+                android:text="select"
+                android:visibility="gone"
+
+
+                />
+
 
         </com.google.android.material.textfield.TextInputLayout>
-
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/password_repeat"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/add_language_3"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:hint="@string/repeat_password"
+            android:layout_marginBottom="15dp"
+            android:hint="@string/languages"
             app:boxBackgroundColor="#8BFFFFFF"
             app:boxCornerRadiusBottomEnd="30dp"
             app:boxCornerRadiusBottomStart="30dp"
@@ -130,14 +138,69 @@
             app:boxCornerRadiusTopStart="30dp"
             app:boxStrokeColor="@color/black"
             app:boxStrokeWidth="2.5dp"
-            app:endIconMode="password_toggle">
+            app:hintTextColor="@color/black"
+            android:visibility="gone"
+            >
 
-            <com.google.android.material.textfield.TextInputEditText
+            <AutoCompleteTextView
+                android:id="@+id/autocompletetext3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword" />
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:inputType="none"
+                android:paddingStart="20dp"
+                android:text="select"
+                android:visibility="gone"
+
+                />
+
 
         </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/add_languages"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/add_more_languages"
+            android:layout_marginStart="230dp"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/baseline_add_24"
+
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/country"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:hint="@string/country"
+            app:boxBackgroundColor="#8BFFFFFF"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="2.5dp"
+            app:hintTextColor="@color/black"
+            >
+
+            <AutoCompleteTextView
+                android:id="@+id/countrydropdown"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:inputType="none"
+                android:paddingStart="20dp"
+                android:text="select"
+
+                />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
 
 
     </TableLayout>

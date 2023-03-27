@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/logInFragment">
+    app:startDestination="@id/registrationFragment2">
 
     <fragment
         android:id="@+id/logInFragment"
@@ -27,4 +27,9 @@
         android:name="com.example.onroad.fragments.authentification.ResetPasswordFragment"
         android:label="fragment_reset_password"
         tools:layout="@layout/fragment_reset_password" />
+    <fragment
+        android:id="@+id/registrationFragment2"
+        android:name="com.example.onroad.fragments.authentification.RegistrationFragment2"
+        android:label="fragment_registration2"
+        tools:layout="@layout/fragment_registration2" />
 </navigation>
