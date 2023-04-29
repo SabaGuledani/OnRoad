@@ -4,7 +4,7 @@ class TourOperator:User {
     var car:String = "car model"
     //status 1 means Driver, 2 guide, 3 Driver-Guide, Int is for saving space in
     //database
-    var status:Int = 1
+    //var status:Int = 1
     var rating:Float = 0.0F
 
 
@@ -18,7 +18,7 @@ class TourOperator:User {
                 languages:ArrayList<String>,
                 country:String,
                 car:String,
-                status:Int,
+                //status:Int,
                 rating:Float){
         this.useruid = useruid
         this.name = name
@@ -28,7 +28,7 @@ class TourOperator:User {
         this.number2 = number2
         this.email = email
         this.car = car
-        this.status = status
+        //this.status = status
         this.rating = rating
         this.country = country
     }

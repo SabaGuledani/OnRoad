@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4A020202"
+
     tools:context=".fragments.MainFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,7 +15,6 @@
 
 
         <org.imaginativeworld.whynotimagecarousel.ImageCarousel
-            android:background="@color/black"
             android:id="@+id/carousel"
             android:layout_width="match_parent"
             android:layout_height="180dp"
@@ -44,6 +43,7 @@
             android:layout_marginTop="45dp">
 
             <TextView
+                android:id="@+id/popular_days_TV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableRight="@drawable/round_keyboard_arrow_right_24"

@@ -16,152 +16,158 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="create_your_profile">Create your profile</string>
     <string name="add_more_languages">add more languages</string>
-        <string-array name="languages">
+    <string-array name="languages">
 
-            <item>Afrikaans</item>
-            <item >Albanian - shqip</item>
-            <item >Amharic - አማርኛ</item>
-            <item >Arabic - العربية</item>
-            <item >Aragonese - aragonés</item>
-            <item >Armenian - հայերեն</item>
-            <item >Asturian - asturianu</item>
-            <item >Azerbaijani - azərbaycan dili</item>
-            <item >Basque - euskara</item>
-            <item >Belarusian - беларуская</item>
-            <item >Bengali - বাংলা</item>
-            <item >Bosnian - bosanski</item>
-            <item >Breton - brezhoneg</item>
-            <item >Bulgarian - български</item>
-            <item >Catalan - català</item>
-            <item >Central Kurdish - کوردی (دەستنوسی عەرەبی)</item>
-            <item >Chinese - 中文</item>
-            <item>Chinese (Hong Kong) - 中文（香港）</item>
-            <item >Chinese (Simplified) - 中文（简体）</item>
-            <item >Chinese (Traditional) - 中文（繁體）</item>
-            <item >Corsican</item>
-            <item >Croatian - hrvatski</item>
-            <item >Czech - čeština</item>
-            <item >Danish - dansk</item>
-            <item >Dutch - Nederlands</item>
-            <item >English</item>
-            <item >English (Australia)</item>
-            <item >English (Canada)</item>
-            <item >English (India)</item>
-            <item>English (New Zealand)</item>
-            <item>English (South Africa)</item>
-            <item>English (United Kingdom)</item>
-            <item>English (United States)</item>
-            <item>Esperanto - esperanto</item>
-            <item >Estonian - eesti</item>
-            <item >Faroese - føroyskt</item>
-            <item >Filipino</item>
-            <item >Finnish - suomi</item>
-            <item >French - français</item>
-            <item >French (Canada) - français (Canada)</item>
-            <item >French (France) - français (France)</item>
-            <item >French (Switzerland) - français (Suisse)</item>
-            <item >Galician - galego</item>
-            <item >Georgian - ქართული</item>
-            <item >German - Deutsch</item>
-            <item >German (Austria) - Deutsch (Österreich)</item>
-            <item >German (Germany) - Deutsch (Deutschland)</item>
-            <item >German (Liechtenstein) - Deutsch (Liechtenstein)</item>
-            <item >German (Switzerland) - Deutsch (Schweiz)</item>
-            <item >Greek - Ελληνικά</item>
-            <item >Guarani</item>
-            <item>Gujarati - ગુજરાતી</item>
-            <item >Hausa</item>
-            <item >Hawaiian - ʻŌlelo Hawaiʻi</item>
-            <item >Hebrew - עברית</item>
-            <item >Hindi - हिन्दी</item>
-            <item >Hungarian - magyar</item>
-            <item >Icelandic - íslenska</item>
-            <item >Indonesian - Indonesia</item>
-            <item >Interlingua</item>
-            <item >Irish - Gaeilge</item>
-            <item>Italian - italiano</item>
-            <item >Italian (Italy) - italiano (Italia)</item>
-            <item >Italian (Switzerland) - italiano (Svizzera)</item>
-            <item >Japanese - 日本語</item>
-            <item >Kannada - ಕನ್ನಡ</item>
-            <item >Kazakh - қазақ тілі</item>
-            <item >Khmer - ខ្មែរ</item>
-            <item >Korean - 한국어</item>
-            <item >Kurdish - Kurdî</item>
-            <item >Kyrgyz - кыргызча</item>
-            <item >Lao - ລາວ</item>
-            <item >Latin</item>
-            <item >Latvian - latviešu</item>
-            <item >Lingala - lingála</item>
-            <item >Lithuanian - lietuvių</item>
-            <item >Macedonian - македонски</item>
-            <item >Malay - Bahasa Melayu</item>
-            <item >Malayalam - മലയാളം</item>
-            <item >Maltese - Malti</item>
-            <item >Marathi - मराठी</item>
-            <item >Mongolian - монгол</item>
-            <item >Nepali - नेपाली</item>
-            <item >Norwegian - norsk</item>
-            <item >Norwegian Bokmål - norsk bokmål</item>
-            <item >Norwegian Nynorsk - nynorsk</item>
-            <item >Occitan</item>
-            <item >Oriya - ଓଡ଼ିଆ</item>
-            <item >Oromo - Oromoo</item>
-            <item >Pashto - پښتو</item>
-            <item >Persian - فارسی</item>
-            <item >Polish - polski</item>
-            <item >Portuguese - português</item>
-            <item >Portuguese (Brazil) - português (Brasil)</item>
-            <item >Portuguese (Portugal) - português (Portugal)</item>
-            <item >Punjabi - ਪੰਜਾਬੀ</item>
-            <item>Quechua</item>
-            <item>Romanian - română</item>
-            <item>Romanian (Moldova) - română (Moldova)</item>
-            <item>Romansh - rumantsch</item>
-            <item>Russian - русский</item>
-            <item>Scottish Gaelic</item>
-            <item>Serbian - српски</item>
-            <item>Serbo-Croatian - Srpskohrvatski</item>
-            <item>Shona - chiShona</item>
-            <item>Sindhi</item>
-            <item>Sinhala - සිංහල</item>
-            <item>Slovak - slovenčina</item>
-            <item>Slovenian - slovenščina</item>
-            <item>Somali - Soomaali</item>
-            <item>Southern Sotho</item>
-            <item>Spanish - español</item>
-            <item >Spanish (Argentina) - español (Argentina)</item>
-            <item >Spanish (Latin America) - español (Latinoamérica)</item>
-            <item >Spanish (Mexico) - español (México)</item>
-            <item >Spanish (Spain) - español (España)</item>
-            <item >Spanish (United States) - español (Estados Unidos)</item>
-            <item >Sundanese</item>
-            <item>Swahili - Kiswahili</item>
-            <item>Swedish - svenska</item>
-            <item>Tajik - тоҷикӣ</item>
-            <item>Tamil - தமிழ்</item>
-            <item>Tatar</item>
-            <item>Telugu - తెలుగు</item>
-            <item>Thai - ไทย</item>
-            <item>Tigrinya - ትግርኛ</item>
-            <item>Tongan - lea fakatonga</item>
-            <item>Turkish - Türkçe</item>
-            <item>Turkmen</item>
-            <item>Twi</item>
-            <item>Ukrainian - українська</item>
-            <item >Urdu - اردو</item>
-            <item >Uyghur</item>
-            <item >Uzbek - o‘zbek</item>
-            <item >Vietnamese - Tiếng Việt</item>
-            <item >Walloon - wa</item>
-            <item >Welsh - Cymraeg</item>
-            <item >Western Frisian</item>
-            <item >Xhosa</item>
-            <item >Yiddish</item>
-            <item >Yoruba - Èdè Yorùbá</item>
-            <item >Zulu - isiZulu</item>
+        <item>Afrikaans</item>
+        <item>Albanian - shqip</item>
+        <item>Amharic - አማርኛ</item>
+        <item>Arabic - العربية</item>
+        <item>Aragonese - aragonés</item>
+        <item>Armenian - հայերեն</item>
+        <item>Asturian - asturianu</item>
+        <item>Azerbaijani - azərbaycan dili</item>
+        <item>Basque - euskara</item>
+        <item>Belarusian - беларуская</item>
+        <item>Bengali - বাংলা</item>
+        <item>Bosnian - bosanski</item>
+        <item>Breton - brezhoneg</item>
+        <item>Bulgarian - български</item>
+        <item>Catalan - català</item>
+        <item>Central Kurdish - کوردی (دەستنوسی عەرەبی)</item>
+        <item>Chinese - 中文</item>
+        <item>Chinese (Hong Kong) - 中文（香港）</item>
+        <item>Chinese (Simplified) - 中文（简体）</item>
+        <item>Chinese (Traditional) - 中文（繁體）</item>
+        <item>Corsican</item>
+        <item>Croatian - hrvatski</item>
+        <item>Czech - čeština</item>
+        <item>Danish - dansk</item>
+        <item>Dutch - Nederlands</item>
+        <item>English</item>
+        <item>English (Australia)</item>
+        <item>English (Canada)</item>
+        <item>English (India)</item>
+        <item>English (New Zealand)</item>
+        <item>English (South Africa)</item>
+        <item>English (United Kingdom)</item>
+        <item>English (United States)</item>
+        <item>Esperanto - esperanto</item>
+        <item>Estonian - eesti</item>
+        <item>Faroese - føroyskt</item>
+        <item>Filipino</item>
+        <item>Finnish - suomi</item>
+        <item>French - français</item>
+        <item>French (Canada) - français (Canada)</item>
+        <item>French (France) - français (France)</item>
+        <item>French (Switzerland) - français (Suisse)</item>
+        <item>Galician - galego</item>
+        <item>Georgian - ქართული</item>
+        <item>German - Deutsch</item>
+        <item>German (Austria) - Deutsch (Österreich)</item>
+        <item>German (Germany) - Deutsch (Deutschland)</item>
+        <item>German (Liechtenstein) - Deutsch (Liechtenstein)</item>
+        <item>German (Switzerland) - Deutsch (Schweiz)</item>
+        <item>Greek - Ελληνικά</item>
+        <item>Guarani</item>
+        <item>Gujarati - ગુજરાતી</item>
+        <item>Hausa</item>
+        <item>Hawaiian - ʻŌlelo Hawaiʻi</item>
+        <item>Hebrew - עברית</item>
+        <item>Hindi - हिन्दी</item>
+        <item>Hungarian - magyar</item>
+        <item>Icelandic - íslenska</item>
+        <item>Indonesian - Indonesia</item>
+        <item>Interlingua</item>
+        <item>Irish - Gaeilge</item>
+        <item>Italian - italiano</item>
+        <item>Italian (Italy) - italiano (Italia)</item>
+        <item>Italian (Switzerland) - italiano (Svizzera)</item>
+        <item>Japanese - 日本語</item>
+        <item>Kannada - ಕನ್ನಡ</item>
+        <item>Kazakh - қазақ тілі</item>
+        <item>Khmer - ខ្មែរ</item>
+        <item>Korean - 한국어</item>
+        <item>Kurdish - Kurdî</item>
+        <item>Kyrgyz - кыргызча</item>
+        <item>Lao - ລາວ</item>
+        <item>Latin</item>
+        <item>Latvian - latviešu</item>
+        <item>Lingala - lingála</item>
+        <item>Lithuanian - lietuvių</item>
+        <item>Macedonian - македонски</item>
+        <item>Malay - Bahasa Melayu</item>
+        <item>Malayalam - മലയാളം</item>
+        <item>Maltese - Malti</item>
+        <item>Marathi - मराठी</item>
+        <item>Mongolian - монгол</item>
+        <item>Nepali - नेपाली</item>
+        <item>Norwegian - norsk</item>
+        <item>Norwegian Bokmål - norsk bokmål</item>
+        <item>Norwegian Nynorsk - nynorsk</item>
+        <item>Occitan</item>
+        <item>Oriya - ଓଡ଼ିଆ</item>
+        <item>Oromo - Oromoo</item>
+        <item>Pashto - پښتو</item>
+        <item>Persian - فارسی</item>
+        <item>Polish - polski</item>
+        <item>Portuguese - português</item>
+        <item>Portuguese (Brazil) - português (Brasil)</item>
+        <item>Portuguese (Portugal) - português (Portugal)</item>
+        <item>Punjabi - ਪੰਜਾਬੀ</item>
+        <item>Quechua</item>
+        <item>Romanian - română</item>
+        <item>Romanian (Moldova) - română (Moldova)</item>
+        <item>Romansh - rumantsch</item>
+        <item>Russian - русский</item>
+        <item>Scottish Gaelic</item>
+        <item>Serbian - српски</item>
+        <item>Serbo-Croatian - Srpskohrvatski</item>
+        <item>Shona - chiShona</item>
+        <item>Sindhi</item>
+        <item>Sinhala - සිංහල</item>
+        <item>Slovak - slovenčina</item>
+        <item>Slovenian - slovenščina</item>
+        <item>Somali - Soomaali</item>
+        <item>Southern Sotho</item>
+        <item>Spanish - español</item>
+        <item>Spanish (Argentina) - español (Argentina)</item>
+        <item>Spanish (Latin America) - español (Latinoamérica)</item>
+        <item>Spanish (Mexico) - español (México)</item>
+        <item>Spanish (Spain) - español (España)</item>
+        <item>Spanish (United States) - español (Estados Unidos)</item>
+        <item>Sundanese</item>
+        <item>Swahili - Kiswahili</item>
+        <item>Swedish - svenska</item>
+        <item>Tajik - тоҷикӣ</item>
+        <item>Tamil - தமிழ்</item>
+        <item>Tatar</item>
+        <item>Telugu - తెలుగు</item>
+        <item>Thai - ไทย</item>
+        <item>Tigrinya - ትግርኛ</item>
+        <item>Tongan - lea fakatonga</item>
+        <item>Turkish - Türkçe</item>
+        <item>Turkmen</item>
+        <item>Twi</item>
+        <item>Ukrainian - українська</item>
+        <item>Urdu - اردو</item>
+        <item>Uyghur</item>
+        <item>Uzbek - o‘zbek</item>
+        <item>Vietnamese - Tiếng Việt</item>
+        <item>Walloon - wa</item>
+        <item>Welsh - Cymraeg</item>
+        <item>Western Frisian</item>
+        <item>Xhosa</item>
+        <item>Yiddish</item>
+        <item>Yoruba - Èdè Yorùbá</item>
+        <item>Zulu - isiZulu</item>
 
 
+    </string-array>
+
+    <string-array name="arr">
+        <item>ragac</item>
+        <item>ragac</item>
+        <item>ragac3</item>
 
     </string-array>
 

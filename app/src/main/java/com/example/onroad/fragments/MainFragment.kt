@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.constraintlayout.helper.widget.Carousel
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
@@ -29,9 +31,11 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         private lateinit var binding:FragmentMainBinding
         private lateinit var tourListPopular:ArrayList<Tour>
         private lateinit var tourListLong:ArrayList<Tour>
+        private lateinit var tourListShort:ArrayList<Tour>
         private lateinit var dbref: DatabaseReference
         private lateinit var horizontalRecyclerViewAdapter:HorizontalRecyclerViewAdapter
         private lateinit var horizontalRecyclerViewAdapterLong:HorizontalRecyclerViewAdapter
+        private lateinit var horizontalRecyclerViewAdapterShort:HorizontalRecyclerViewAdapter
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -42,18 +46,23 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
         val recyclerview = binding.recyclerView
         val recyclerviewLong = binding.recyclerView2
+        val recyclerviewshort = binding.recyclerViewShort
         recyclerview.layoutManager = LinearLayoutManager(context,RecyclerView.HORIZONTAL,false)
         recyclerviewLong.layoutManager = LinearLayoutManager(context,RecyclerView.HORIZONTAL,false)
+        recyclerviewshort.layoutManager = LinearLayoutManager(context,RecyclerView.HORIZONTAL,false)
 
         tourListPopular = ArrayList()
         tourListLong = ArrayList()
+        tourListShort = ArrayList()
 
         dbref = FirebaseDatabase.getInstance().getReference()
         horizontalRecyclerViewAdapter = HorizontalRecyclerViewAdapter(tourListPopular)
         horizontalRecyclerViewAdapterLong = HorizontalRecyclerViewAdapter(tourListLong)
+        horizontalRecyclerViewAdapterShort = HorizontalRecyclerViewAdapter(tourListShort)
 
         recyclerview.adapter = horizontalRecyclerViewAdapter
         recyclerviewLong.adapter = horizontalRecyclerViewAdapterLong
+        recyclerviewshort.adapter = horizontalRecyclerViewAdapterShort
 
 //        binding.button.setOnClickListener {
 //            var list = ArrayList<String>()
@@ -69,20 +78,23 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             override fun onDataChange(snapshot: DataSnapshot) {
                 tourListPopular.clear()
                 tourListLong.clear()
+                tourListShort.clear()
                 for (postsnapshot in snapshot.children) {
                     val driverobject = postsnapshot.getValue(Tour::class.java)
                     if (driverobject != null) {
                         tourListPopular.add(driverobject)
                         tourListLong.add(driverobject)
+                        tourListShort.add(driverobject)
 
                     }
                 }
                 horizontalRecyclerViewAdapter.notifyDataSetChanged()
                 horizontalRecyclerViewAdapterLong.notifyDataSetChanged()
+                horizontalRecyclerViewAdapterShort.notifyDataSetChanged()
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+                Toast.makeText(context, "check your internet connection", Toast.LENGTH_SHORT).show()
             }
 
 
@@ -117,6 +129,9 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         list.add(CarouselItem(imageDrawable = R.drawable.stone))
         list.add(CarouselItem(imageDrawable = R.drawable.stone_2))
         list.add(CarouselItem(imageDrawable = R.drawable.martvili))
+        list.add(CarouselItem(imageDrawable = R.drawable.tblisi_2))
+        list.add(CarouselItem(imageDrawable = R.drawable.old_tblisi))
+        list.add(CarouselItem(imageDrawable = R.drawable.tbilisi))
         binding.carousel.setData(list)
 
 
@@ -137,8 +152,27 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
         })
 
+        horizontalRecyclerViewAdapterShort.setOnItemClickListener(object :
+            HorizontalRecyclerViewAdapter.onItemClickListener{
+            override fun onItemClick(position: Int): String? {
+                return "araferi"
+            }
+
+        })
 
 
+        binding.multyDayTV.setOnClickListener {
+            val action = MainFragmentDirections.actionMainFragmentToFragmentExplore()
+            findNavController().navigate(action)
+        }
+        binding.shortDayTV.setOnClickListener {
+            val action = MainFragmentDirections.actionMainFragmentToFragmentExplore()
+            findNavController().navigate(action)
+        }
+        binding.popularDaysTV.setOnClickListener {
+            val action = MainFragmentDirections.actionMainFragmentToFragmentExplore()
+            findNavController().navigate(action)
+        }
 
 
 

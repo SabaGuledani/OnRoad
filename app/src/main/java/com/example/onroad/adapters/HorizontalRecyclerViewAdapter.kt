@@ -59,7 +59,16 @@ class HorizontalRecyclerViewAdapter(var tourList:ArrayList<Tour>):
         holder.carModel.text = currentTour.ownerOperator?.car ?: "model"
         holder.ratingbar.rating = currentTour.tourRating
         holder.rating.text = currentTour.tourRating.toString()
-        holder.tourImage.setImageResource(R.drawable.martvili)
+        var list = (1..6).toList()
+        when (list.random()){
+            1->holder.tourImage.setImageResource(R.drawable.martvili)
+            2->holder.tourImage.setImageResource(R.drawable.stone)
+            3->holder.tourImage.setImageResource(R.drawable.stone_2)
+            4->holder.tourImage.setImageResource(R.drawable.tbilisi)
+            5->holder.tourImage.setImageResource(R.drawable.old_tblisi)
+            6->holder.tourImage.setImageResource(R.drawable.tblisi_2)
+        }
+
 
 
 

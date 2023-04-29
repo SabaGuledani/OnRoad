@@ -9,7 +9,11 @@
         android:id="@+id/MainFragment"
         android:name="com.example.onroad.fragments.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_MainFragment_to_fragmentExplore"
+            app:destination="@id/FragmentExplore" />
+    </fragment>
     <fragment
         android:id="@+id/Fragment2"
         android:name="com.example.onroad.fragments.Fragment2"
@@ -20,4 +24,9 @@
         android:name="com.example.onroad.fragments.Fragment3"
         android:label="fragment_3"
         tools:layout="@layout/fragment_3" />
+    <fragment
+        android:id="@+id/FragmentExplore"
+        android:name="com.example.onroad.fragments.FragmentExplore"
+        android:label="fragment_explore"
+        tools:layout="@layout/fragment_explore" />
 </navigation>

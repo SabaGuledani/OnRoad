@@ -48,11 +48,11 @@ RecyclerView.Adapter<RecyclerviewAdapter.DriverViewHolder>(){
         holder.name.text = currentDriver.name
         holder.carModel.text = currentDriver.car
         holder.ratingbar.rating = currentDriver.rating
-        when(currentDriver.status){
-            1->holder.status.text = "Driver"
-            2->holder.status.text = "Guide"
-            3->holder.status.text = "Driver-guide"
-        }
+//        when(currentDriver.status){
+//            1->holder.status.text = "Driver"
+//            2->holder.status.text = "Guide"
+//            3->holder.status.text = "Driver-guide"
+//        }
 
         holder.rating.text = currentDriver.rating.toString()
     }
