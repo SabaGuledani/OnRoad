@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.constraintlayout.helper.widget.Carousel
+import androidx.core.os.bundleOf
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -160,11 +162,11 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
         })
 
-
         binding.multyDayTV.setOnClickListener {
-            val action = MainFragmentDirections.actionMainFragmentToFragmentExplore()
-            findNavController().navigate(action)
+            val name = "name"
+            val action = MainFragmentDirections.actionMainFragmentToFragmentExplore(name)
         }
+
         binding.shortDayTV.setOnClickListener {
             val action = MainFragmentDirections.actionMainFragmentToFragmentExplore()
             findNavController().navigate(action)
@@ -183,6 +185,9 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
     }
 
-
+//    fun bundleTotransit(info:String): Bundle {
+//
+//        return bundle
+//    }
 
 }

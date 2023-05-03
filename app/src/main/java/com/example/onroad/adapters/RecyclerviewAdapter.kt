@@ -24,7 +24,7 @@ RecyclerView.Adapter<RecyclerviewAdapter.DriverViewHolder>(){
     class DriverViewHolder(itemView: View,listener:onItemClickListener):RecyclerView.ViewHolder(itemView){
         var name = itemView.findViewById<TextView>(R.id.name)
         var carModel = itemView.findViewById<TextView>(R.id.car_model)
-        var status = itemView.findViewById<TextView>(R.id.status)
+        var tourDescription = itemView.findViewById<TextView>(R.id.tour_description)
         var ratingbar = itemView.findViewById<RatingBar>(R.id.tour_ratingbar)
         var rating = itemView.findViewById<TextView>(R.id.rating)
         init {

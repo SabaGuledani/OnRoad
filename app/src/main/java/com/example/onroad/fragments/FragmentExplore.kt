@@ -2,6 +2,7 @@ package com.example.onroad.fragments
 
 import android.os.Binder
 import android.os.Bundle
+import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +18,7 @@ import com.example.onroad.adapters.RecyclerviewAdapter
 import com.example.onroad.classes.Tour
 import com.example.onroad.classes.TourOperator
 import com.example.onroad.databinding.FragmentExploreBinding
+import com.google.android.material.textfield.MaterialAutoCompleteTextView
 import com.google.firebase.database.*
 
 
@@ -26,7 +28,15 @@ class FragmentExplore : Fragment(R.layout.fragment_explore) {
     private lateinit var dbref: DatabaseReference
     private lateinit var recyclerviewAdapter: RecyclerviewAdapter
 
+    override fun onResume() {
+        super.onResume()
 
+        val items = listOf("popular", "length", "price", "rating")
+        val adapter = ArrayAdapter(requireContext(), androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, items)
+        binding.textField.setAdapter(adapter)
+
+
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -37,6 +47,8 @@ class FragmentExplore : Fragment(R.layout.fragment_explore) {
         tourList = ArrayList()
         dbref = FirebaseDatabase.getInstance().getReference()
         recyclerviewAdapter = RecyclerviewAdapter(tourList)
+
+
 
         recyclerview.adapter = recyclerviewAdapter
         dbref.child("drivers").addValueEventListener(object : ValueEventListener {
@@ -63,9 +75,7 @@ class FragmentExplore : Fragment(R.layout.fragment_explore) {
         })
 
 
-        val items = listOf("Item 1", "Item 2", "Item 3", "Item 4")
-        val adapter = ArrayAdapter(requireContext(), R.layout.list_item, items)
-        (binding.textField.editableText as? AutoCompleteTextView)?.setAdapter(adapter)
+
 
         recyclerviewAdapter.setOnItemClickListener(object :
             RecyclerviewAdapter.onItemClickListener{
@@ -75,5 +85,6 @@ class FragmentExplore : Fragment(R.layout.fragment_explore) {
 
         })
     }
+
 
 }
