@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@color/md_theme_light_surface"
     tools:context=".fragments.MainFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -42,7 +42,7 @@
             app:layout_constraintTop_toBottomOf="@+id/carousel"
             android:layout_marginTop="45dp">
 
-            <TextView
+        <TextView
                 android:id="@+id/popular_days_TV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -124,6 +124,45 @@
 
 
             <TextView
+                android:id="@+id/high_rating_TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:drawableRight="@drawable/round_keyboard_arrow_right_24"
+                android:padding="4dp"
+                android:layout_marginHorizontal="13dp"
+                android:text="short tours"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/recycler_view_rating" />
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_rating"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:scrollbarSize="0dp"
+                android:scrollbars="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:listitem="@layout/rv_item_tour_horizontal" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/high_rating_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/multy_day_constraint"
+            android:layout_marginTop="10dp"
+
+            >
+
+
+
+            <TextView
                 android:id="@+id/short_day_TV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -152,6 +191,9 @@
                 tools:listitem="@layout/rv_item_tour_horizontal" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </ScrollView>

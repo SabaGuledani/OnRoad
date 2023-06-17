@@ -3,84 +3,127 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="160dp"
-    android:padding="5dp">
+    android:layout_height="285dp"
+    android:background="@color/md_theme_light_surface"
+    >
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/tour_imageview"
-        android:layout_width="wrap_content"
-        android:layout_height="125dp"
-        android:adjustViewBounds="true"
-        android:maxWidth="150dp"
-        android:maxHeight="105dp"
-        android:src="@drawable/martvili"
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.007"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:shapeAppearanceOverlay="@style/rounded" />
-
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:maxWidth="230dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:lines="2"
-        android:text="tour name tour name name of tour tour name tour "
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/tour_imageview"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tour_description"
-        android:layout_width="wrap_content"
-        android:maxWidth="230dp"
-        android:layout_height="wrap_content"
-        android:text="@string/lorem_ipsum"
-        android:textSize="10sp"
-        android:lines="4"
-
-        app:layout_constraintStart_toStartOf="@+id/name"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
-
-    <RatingBar
-        android:id="@+id/tour_ratingbar"
-        style="@style/Widget.AppCompat.RatingBar.Small"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:progressTint="@color/rust"
-        android:rating="2.5"
-        android:scaleX=".6"
-        android:scaleY=".7"
-        android:stepSize="0.5"
-        app:layout_constraintEnd_toEndOf="@+id/tour_imageview"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tour_imageview"
-        app:layout_constraintTop_toBottomOf="@+id/tour_imageview" />
-
-    <TextView
-        android:id="@+id/rating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1.1"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/tour_ratingbar"
-        app:layout_constraintStart_toEndOf="@+id/tour_ratingbar"
-        />
-
-    <TextView
-        android:id="@+id/car_model"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="5dp"
-        android:text="car model"
-        android:textSize="12sp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:elevation="4dp"
+        android:layout_marginVertical="8dp"
+        android:background="@drawable/constr_layout_outline"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/tour_imageview"
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:adjustViewBounds="true"
+            android:maxWidth="350dp"
+            android:src="@drawable/martvili"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/customRoundedImageView" />
+
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:maxLines="2"
+            android:maxWidth="230dp"
+            android:textColor="@color/md_theme_light_onSurface"
+            android:text="tour name tour name name of tour tour name tour "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/tour_imageview"
+            app:layout_constraintTop_toBottomOf="@+id/tour_imageview" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_theme_light_onSurface"
+            android:text="name surname"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <RatingBar
+            android:id="@+id/tour_ratingbar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:progressTint="@color/md_theme_light_primary"
+            android:rating="2.5"
+            android:scaleX=".6"
+            android:scaleY=".7"
+            android:stepSize="0.5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_theme_light_onSurface"
+
+            android:text="1.1"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tour_ratingbar"
+            app:layout_constraintStart_toEndOf="@+id/tour_ratingbar"
+            app:layout_constraintTop_toTopOf="@+id/tour_ratingbar" />
+
+
+        <TextView
+            android:id="@+id/price_per_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_theme_light_onSurface"
+            android:text="Price per day"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tour_imageview" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_theme_light_onSurface"
+            android:text="$100"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/price_per_day"
+            app:layout_constraintTop_toBottomOf="@+id/price_per_day" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_theme_light_onSurface"
+            android:text="8 days"
+            app:layout_constraintEnd_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/car_model"
+            android:layout_width="wrap_content"
+            android:textColor="@color/md_theme_light_onSurface"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="car model"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,15 +1,18 @@
 package com.example.onroad.adapters
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.onroad.R
 import com.example.onroad.classes.TourOperator
 
-class RecyclerviewAdapter(var tourOperatorList:ArrayList<TourOperator>):
+class RecyclerviewAdapter(val context: Context, var tourOperatorList:ArrayList<TourOperator>):
 RecyclerView.Adapter<RecyclerviewAdapter.DriverViewHolder>(){
     private lateinit var mlistener:onItemClickListener
 
@@ -22,6 +25,7 @@ RecyclerView.Adapter<RecyclerviewAdapter.DriverViewHolder>(){
     }
 
     class DriverViewHolder(itemView: View,listener:onItemClickListener):RecyclerView.ViewHolder(itemView){
+        var tour_imageview = itemView.findViewById<ImageView>(R.id.tour_imageview)
         var name = itemView.findViewById<TextView>(R.id.name)
         var carModel = itemView.findViewById<TextView>(R.id.car_model)
         var tourDescription = itemView.findViewById<TextView>(R.id.tour_description)
@@ -48,6 +52,11 @@ RecyclerView.Adapter<RecyclerviewAdapter.DriverViewHolder>(){
         holder.name.text = currentDriver.name
         holder.carModel.text = currentDriver.car
         holder.ratingbar.rating = currentDriver.rating
+
+
+        Glide.with(context)
+            .load(R.drawable.martvili).centerCrop()
+            .into(holder.tour_imageview)
 //        when(currentDriver.status){
 //            1->holder.status.text = "Driver"
 //            2->holder.status.text = "Guide"

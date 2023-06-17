@@ -18,6 +18,7 @@ import com.example.onroad.adapters.RecyclerviewAdapter
 import com.example.onroad.classes.Tour
 import com.example.onroad.classes.TourOperator
 import com.example.onroad.databinding.FragmentExploreBinding
+import com.example.onroad.fragments.FragmentExploreArgs.Companion.fromBundle
 import com.google.android.material.textfield.MaterialAutoCompleteTextView
 import com.google.firebase.database.*
 
@@ -31,8 +32,9 @@ class FragmentExplore : Fragment(R.layout.fragment_explore) {
     override fun onResume() {
         super.onResume()
 
-        val items = listOf("popular", "length", "price", "rating")
+        val items = listOf("popular descending","popular ascending", "length descending" ,"length ascending" ,"price descending", "price ascending","rating descending", "rating ascending",)
         val adapter = ArrayAdapter(requireContext(), androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, items)
+        sortBy(items)
         binding.textField.setAdapter(adapter)
 
 
@@ -46,7 +48,7 @@ class FragmentExplore : Fragment(R.layout.fragment_explore) {
 
         tourList = ArrayList()
         dbref = FirebaseDatabase.getInstance().getReference()
-        recyclerviewAdapter = RecyclerviewAdapter(tourList)
+        recyclerviewAdapter = RecyclerviewAdapter(requireContext(),tourList)
 
 
 
@@ -84,6 +86,12 @@ class FragmentExplore : Fragment(R.layout.fragment_explore) {
             }
 
         })
+    }
+    fun sortBy(items:List<String>){
+        val sortBy = FragmentExploreArgs.fromBundle(requireArguments()).sortInfo
+        binding.textField.setText(items[sortBy.toInt()])
+
+
     }
 
 

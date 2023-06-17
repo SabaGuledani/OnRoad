@@ -4,7 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="180dp"
     android:layout_height="230dp"
-    tools:text="@tools:sample/lorem/random">
+    android:paddingTop="3dp"
+    tools:text="@tools:sample/lorem/random"
+    android:background="@drawable/constr_layout_outline"
+    android:layout_marginHorizontal="5dp">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/tour_imageview"

@@ -161,20 +161,19 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             }
 
         })
+        binding.popularDaysTV.setOnClickListener {
+            toFragmentExplore("0")
 
+        }
         binding.multyDayTV.setOnClickListener {
-            val name = "name"
-            val action = MainFragmentDirections.actionMainFragmentToFragmentExplore(name)
+            toFragmentExplore("2")
         }
 
         binding.shortDayTV.setOnClickListener {
-            val action = MainFragmentDirections.actionMainFragmentToFragmentExplore()
-            findNavController().navigate(action)
+            toFragmentExplore("3")
+
         }
-        binding.popularDaysTV.setOnClickListener {
-            val action = MainFragmentDirections.actionMainFragmentToFragmentExplore()
-            findNavController().navigate(action)
-        }
+
 
 
 
@@ -185,9 +184,10 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
     }
 
-//    fun bundleTotransit(info:String): Bundle {
-//
-//        return bundle
-//    }
+    fun toFragmentExplore(sortInfo:String){
+        val action = MainFragmentDirections.actionMainFragmentToFragmentExplore(sortInfo)
+        findNavController().navigate(action)
+
+    }
 
 }
