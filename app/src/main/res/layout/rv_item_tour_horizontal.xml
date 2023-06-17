@@ -54,7 +54,7 @@
     <RatingBar
         android:id="@+id/tour_ratingbar"
         style="@style/Widget.AppCompat.RatingBar.Small"
-        android:progressTint="@color/rust"
+        android:progressTint="@color/md_theme_light_primary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"

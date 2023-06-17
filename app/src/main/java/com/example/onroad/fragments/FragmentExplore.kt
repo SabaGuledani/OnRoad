@@ -31,11 +31,11 @@ class FragmentExplore : Fragment(R.layout.fragment_explore) {
 
     override fun onResume() {
         super.onResume()
+//
+//        val items = listOf("popular descending","popular ascending", "length descending" ,"length ascending" ,"price descending", "price ascending","rating descending", "rating ascending",)
+//        val adapter = ArrayAdapter(requireContext(), androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, items)
+//        sortBy(items)
 
-        val items = listOf("popular descending","popular ascending", "length descending" ,"length ascending" ,"price descending", "price ascending","rating descending", "rating ascending",)
-        val adapter = ArrayAdapter(requireContext(), androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, items)
-        sortBy(items)
-        binding.textField.setAdapter(adapter)
 
 
     }
@@ -87,12 +87,12 @@ class FragmentExplore : Fragment(R.layout.fragment_explore) {
 
         })
     }
-    fun sortBy(items:List<String>){
-        val sortBy = FragmentExploreArgs.fromBundle(requireArguments()).sortInfo
-        binding.textField.setText(items[sortBy.toInt()])
-
-
-    }
+//    fun sortBy(items:List<String>){
+//        val sortBy = FragmentExploreArgs.fromBundle(requireArguments()).sortInfo
+//        binding.textField.setText(items[sortBy.toInt()])
+//
+//
+//    }
 
 
 }
