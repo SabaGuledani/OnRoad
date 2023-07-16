@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/md_theme_light_primary" /> <!-- Adjust the background color as needed -->
-    <corners android:radius="8dp" /> <!-- Adjust the corner radius to make it more or less rounded -->
+    <solid android:color="@color/md_theme_light_secondary" /> <!-- Adjust the background color as needed -->
+    <corners android:radius="6dp" /> <!-- Adjust the corner radius to make it more or less rounded -->
 </shape>

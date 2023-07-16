@@ -50,7 +50,7 @@
                 android:padding="4dp"
                 android:layout_marginHorizontal="13dp"
                 android:text="Popular tours"
-                android:textColor="@color/black"
+                android:textColor="@color/md_theme_light_onSurface"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/recycler_view"
@@ -93,7 +93,7 @@
             android:padding="4dp"
             android:layout_marginHorizontal="13dp"
             android:text="multy-day tours"
-            android:textColor="@color/black"
+            android:textColor="@color/md_theme_light_onSurface"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/recycler_view_2" />

@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onroad.R
@@ -19,6 +20,7 @@ import com.example.onroad.classes.Tour
 import com.example.onroad.classes.TourOperator
 import com.example.onroad.databinding.FragmentExploreBinding
 import com.example.onroad.fragments.FragmentExploreArgs.Companion.fromBundle
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.textfield.MaterialAutoCompleteTextView
 import com.google.firebase.database.*
 
@@ -45,6 +47,9 @@ class FragmentExplore : Fragment(R.layout.fragment_explore) {
         binding = FragmentExploreBinding.bind(view)
         val recyclerview = binding.recyclerView
         recyclerview.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL,false)
+        val bottom_view = requireActivity().findViewById<BottomNavigationView>(R.id.bottom_nav_view)
+
+        bottom_view.visibility = View.VISIBLE
 
         tourList = ArrayList()
         dbref = FirebaseDatabase.getInstance().getReference()
@@ -82,6 +87,9 @@ class FragmentExplore : Fragment(R.layout.fragment_explore) {
         recyclerviewAdapter.setOnItemClickListener(object :
             RecyclerviewAdapter.onItemClickListener{
             override fun onItemClick(position: Int): String? {
+                val action = FragmentExploreDirections.actionFragmentExploreToFragmentTourFullscreen()
+                findNavController().navigate(action)
+
                 return "araferi"
             }
 

@@ -38,7 +38,15 @@
             app:argType="string"
             android:defaultValue="0"
             />
+        <action
+            android:id="@+id/action_FragmentExplore_to_fragmentTourFullscreen"
+            app:destination="@id/fragmentTourFullscreen" />
 
 
     </fragment>
+    <fragment
+        android:id="@+id/fragmentTourFullscreen"
+        android:name="com.example.onroad.fragments.FragmentTourFullscreen"
+        android:label="fragment_tour_fullscreen"
+        tools:layout="@layout/fragment_tour_fullscreen" />
 </navigation>

@@ -7,62 +7,18 @@
     android:background="@color/md_theme_light_background"
     tools:context=".fragments.Fragment2">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/TV"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/carousel"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#8C2727"
-        android:text="@string/hello_blank_fragment"
-        android:textSize="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/dropdown_menu"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:hint="@string/sort_by"
-
-        android:minWidth="160dp"
-        app:boxStrokeWidth="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/summon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5"
-        app:startIconDrawable="@drawable/baseline_filter_list_24">
-
-        <AutoCompleteTextView
-            android:id="@+id/textField"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:focusable="false"
-            android:layout_marginTop="10dp"
-            android:inputType="none"
-            android:text="@string/app_name"
-            android:minWidth="150dp"
-            />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        android:id="@+id/summon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#8C2727"
-        android:text="gamoidzaxe saba"
+        android:layout_height="196dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/item_carousel_main" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
